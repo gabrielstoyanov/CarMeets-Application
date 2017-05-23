@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_event"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="gss130.carmeets.CreateEventActivity">
+
+    <TextView
+        android:text="Event name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="105dp"
+        android:id="@+id/lbl_eventName" />
+
+    <TextView
+        android:text="Event Location: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/lbl_eventLocation"
+        android:layout_below="@+id/lbl_eventName"
+        android:layout_alignEnd="@+id/lbl_eventName" />
+
+    <TextView
+        android:text="Specific information: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/lbl_eventSpecific"
+        android:layout_below="@+id/lbl_eventLocation"
+        android:layout_alignEnd="@+id/lbl_eventLocation" />
+
+    <TextView
+        android:text="Starting time: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_eventSpecific"
+        android:layout_alignEnd="@+id/lbl_eventSpecific"
+        android:layout_marginTop="33dp"
+        android:id="@+id/lbl_eventTime" />
+
+    <TextView
+        android:text="Event duration: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_eventTime"
+        android:layout_alignEnd="@+id/lbl_eventTime"
+        android:layout_marginTop="35dp"
+        android:id="@+id/lbl_eventDuration" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:inputType="text"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_eventName"
+        android:layout_above="@+id/lbl_eventLocation"
+        android:layout_toEndOf="@+id/lbl_eventName" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:inputType="text"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_eventLocation"
+        android:layout_above="@+id/lbl_eventSpecific"
+        android:layout_toEndOf="@+id/lbl_eventLocation" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:inputType="text"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_specificInformation"
+        android:layout_above="@+id/lbl_eventTime"
+        android:layout_toEndOf="@+id/lbl_eventSpecific" />
+
+    <EditText
+        android:layout_height="25dp"
+        android:inputType="text"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_eventStartingTime"
+        android:layout_width="180dp"
+        android:layout_above="@+id/lbl_eventDuration"
+        android:layout_toEndOf="@+id/lbl_eventTime" />
+
+    <EditText
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:inputType="text"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_eventDuration"
+        android:layout_alignBottom="@+id/lbl_eventDuration"
+        android:layout_toEndOf="@+id/lbl_eventDuration" />
+
+    <Button
+        android:text="Clear Data"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_clear"
+        android:textSize="10dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/lbl_eventDurationError"
+        android:layout_alignParentEnd="true"
+        android:layout_height="35dp" />
+
+    <Button
+        android:text="Create Event"
+        android:layout_width="180dp"
+        android:id="@+id/btn_create"
+        android:layout_height="50dp"
+        android:layout_below="@+id/btn_clear"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/carmeetslogo"
+        android:layout_marginTop="21dp"
+        android:id="@+id/imageView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_startingTimeError"
+        android:layout_below="@+id/lbl_eventTime"
+        android:layout_alignStart="@+id/lbl_eventTime"
+        android:text="startingTimeError"
+        android:textColor="#f83a23" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_eventNameError"
+        android:layout_below="@+id/lbl_eventName"
+        android:layout_alignStart="@+id/lbl_eventLocationError"
+        android:text="eventNameError"
+        android:textColor="#f83a23" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_specificInformationError"
+        android:text="specificInformationError"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/lbl_eventSpecific"
+        android:layout_alignStart="@+id/lbl_eventName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_eventLocationError"
+        android:text="eventLocationError"
+        android:textColor="#f83a23"
+        android:layout_above="@+id/txt_specificInformation"
+        android:layout_alignStart="@+id/lbl_specificInformationError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_eventDurationError"
+        android:text="eventDurationError"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/lbl_eventDuration"
+        android:layout_alignStart="@+id/lbl_startingTimeError" />
+</RelativeLayout>

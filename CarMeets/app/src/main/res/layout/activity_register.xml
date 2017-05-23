@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="gss130.carmeets.Register">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/carmeetslogo"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:background="@drawable/border"
+        android:id="@+id/username"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/username"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true"
+        android:inputType="text"
+        android:maxLines="1"/>
+    <!-- making sure the EditText can be a single line only (inputType and maxLines) -->
+
+    <EditText
+        android:background="@drawable/border"
+        android:layout_marginTop="17dp"
+        android:id="@+id/password"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/password"
+        android:layout_below="@+id/username"
+        android:layout_alignStart="@+id/username"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:background="@drawable/border"
+        android:layout_marginTop="20dp"
+        android:id="@+id/location"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/location"
+        android:layout_below="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <EditText
+        android:background="@drawable/border"
+        android:layout_marginTop="15dp"
+        android:id="@+id/age"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/age"
+        android:layout_below="@+id/location"
+        android:layout_alignStart="@+id/location"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <EditText
+        android:background="@drawable/border"
+        android:id="@+id/pref"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/preferences"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/age"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <EditText
+        android:background="@drawable/border"
+        android:id="@+id/avail"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/availability"
+        android:layout_below="@+id/pref"
+        android:layout_alignStart="@+id/pref"
+        android:layout_marginTop="16dp"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <TextView
+        android:text="@string/invalid_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_alignStart="@+id/username"
+        android:id="@+id/username_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp" />
+
+    <TextView
+        android:text="@string/invalid_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_alignStart="@+id/location"
+        android:id="@+id/password_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:text="@string/invalid_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location"
+        android:layout_alignStart="@+id/location"
+        android:id="@+id/location_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:text="@string/invalid_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pref"
+        android:layout_alignStart="@+id/age"
+        android:id="@+id/age_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:text="@string/invalid_preferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pref"
+        android:layout_alignStart="@+id/pref"
+        android:id="@+id/pref_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:text="@string/invalid_availability_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avail"
+        android:layout_alignStart="@+id/car_info"
+        android:id="@+id/avail_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:text="@string/invalid_car_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/car_info"
+        android:layout_alignStart="@+id/car_info"
+        android:id="@+id/car_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"/>
+
+
+    <Button
+        android:text="@string/complete_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_reg"
+        android:layout_below="@+id/car_error"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:entries="@array/genderItems"
+        android:layout_below="@+id/car_error"
+        android:layout_alignStart="@+id/car_error"
+        android:layout_alignEnd="@+id/car_info" />
+
+    <EditText
+        android:background="@drawable/border"
+        android:id="@+id/car_info"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="@string/car_info"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/avail_error"
+        android:layout_alignStart="@+id/avail" />
+
+    <EditText
+        android:background="@drawable/border"
+        android:id="@+id/email"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:clickable="false"
+        android:hint="Email"
+        android:inputType="text"
+        android:maxLines="1"
+        android:layout_below="@+id/avail_error"
+        android:layout_alignStart="@+id/avail_error" />
+
+    <TextView
+        android:text="@string/invalid_car_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_error"
+        android:textColor="#f83a23"
+        android:visibility="invisible"
+        android:textSize="12sp"
+        android:layout_below="@+id/email"
+        android:layout_alignStart="@+id/email" />
+
+
+</RelativeLayout>

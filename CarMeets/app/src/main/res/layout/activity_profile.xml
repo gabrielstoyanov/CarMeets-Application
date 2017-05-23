@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="gss130.carmeets.ProfileActivity">
+
+    <Button
+        android:text="Create Event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_create_event"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="View Events"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_view_event"
+        android:layout_alignBaseline="@+id/btn_create_event"
+        android:layout_alignBottom="@+id/btn_create_event"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Username: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_username"
+        android:layout_alignBaseline="@+id/username"
+        android:layout_alignBottom="@+id/username"
+        android:layout_toStartOf="@+id/register_date" />
+
+    <TextView
+        android:text="Location: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/location"
+        android:layout_alignEnd="@+id/lbl_username"
+        android:id="@+id/lbl_location" />
+
+    <TextView
+        android:text="Member Since: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gender"
+        android:layout_toStartOf="@+id/register_date"
+        android:id="@+id/lbl_membership" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/location"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/lbl_username"
+        android:layout_alignStart="@+id/username" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/age"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/lbl_location"
+        android:layout_alignStart="@+id/location" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/car_info"
+        android:textColor="#f83a23"
+        android:layout_alignBaseline="@+id/lbl_car_info"
+        android:layout_alignBottom="@+id/lbl_car_info"
+        android:layout_alignStart="@+id/preferences" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/car_info"
+        android:layout_alignStart="@+id/car_info" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/preferences"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/age"
+        android:layout_alignStart="@+id/age" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_date"
+        android:textColor="#f83a23"
+        android:layout_below="@+id/gender"
+        android:layout_alignStart="@+id/gender" />
+
+    <TextView
+        android:text="Age: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_age"
+        android:layout_alignBaseline="@+id/age"
+        android:layout_alignBottom="@+id/age"
+        android:layout_toStartOf="@+id/location" />
+
+    <TextView
+        android:text="Car Info: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_car_info"
+        android:layout_below="@+id/lbl_preferences"
+        android:layout_toStartOf="@+id/car_info" />
+
+    <TextView
+        android:text="Preferences: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_preferences"
+        android:layout_alignBaseline="@+id/preferences"
+        android:layout_alignBottom="@+id/preferences"
+        android:layout_toStartOf="@+id/car_info" />
+
+    <TextView
+        android:text="Gender: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_gender"
+        android:layout_below="@+id/lbl_car_info"
+        android:layout_toStartOf="@+id/car_info" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/carmeetslogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView6" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/question_mark"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/imageView6"
+        android:layout_alignStart="@+id/lbl_age" />
+
+    <Button
+        android:text="Edit Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_edit"
+        android:layout_below="@+id/lbl_membership"
+        android:layout_toEndOf="@+id/btn_create_event"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:text="Availability: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_availability"
+        android:layout_below="@+id/lbl_membership"
+        android:layout_toStartOf="@+id/register_date" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/availability"
+        android:text="asdasd"
+        android:textColor="#f83a23"
+        android:layout_alignBaseline="@+id/lbl_availability"
+        android:layout_alignBottom="@+id/lbl_availability"
+        android:layout_toEndOf="@+id/lbl_availability" />
+</RelativeLayout>

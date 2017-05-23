@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_profile_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="gss130.carmeets.ProfileEditActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/carmeetslogo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView7" />
+
+    <TextView
+        android:text="Username: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="53dp"
+        android:id="@+id/lbl_username"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:layout_toEndOf="@+id/lbl_username"
+        android:id="@+id/txt_username"
+        android:layout_above="@+id/txt_location"
+        android:layout_alignTop="@+id/lbl_username" />
+
+    <TextView
+        android:text="Location: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/lbl_location"
+        android:layout_below="@+id/lbl_username"
+        android:layout_toStartOf="@+id/txt_username" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_location"
+        android:layout_alignBottom="@+id/lbl_location"
+        android:layout_toEndOf="@+id/lbl_location" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_age"
+        android:layout_alignBottom="@+id/lbl_age"
+        android:layout_toEndOf="@+id/lbl_age" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_preferences"
+        android:layout_alignBottom="@+id/lbl_preferences"
+        android:layout_toEndOf="@+id/lbl_preferences" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_carInfo"
+        android:layout_alignBottom="@+id/lbl_carInfo"
+        android:layout_toEndOf="@+id/lbl_carInfo" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:id="@+id/sp_gender"
+        android:layout_alignTop="@+id/lbl_gender"
+        android:layout_toEndOf="@+id/lbl_gender"
+        android:entries="@array/genderItems"
+        android:layout_above="@+id/txt_email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_email"
+        android:layout_alignBottom="@+id/lbl_email"
+        android:layout_toEndOf="@+id/lbl_email" />
+
+    <TextView
+        android:text="Age: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/lbl_age"
+        android:layout_below="@+id/lbl_location"
+        android:layout_alignEnd="@+id/lbl_location" />
+
+    <TextView
+        android:text="Preferences: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lbl_preferences"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/lbl_age"
+        android:layout_alignEnd="@+id/lbl_age" />
+
+    <TextView
+        android:text="Car Info: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:id="@+id/lbl_carInfo"
+        android:layout_below="@+id/lbl_preferences"
+        android:layout_alignEnd="@+id/lbl_preferences" />
+
+    <TextView
+        android:text="Gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/lbl_gender"
+        android:layout_below="@+id/lbl_carInfo"
+        android:layout_alignEnd="@+id/lbl_carInfo" />
+
+    <TextView
+        android:text="Email: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/lbl_email"
+        android:layout_below="@+id/lbl_gender"
+        android:layout_alignEnd="@+id/lbl_gender" />
+
+    <Button
+        android:text="Submit Changes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:id="@+id/btn_submit"
+        android:layout_below="@+id/txt_email"
+        android:layout_alignStart="@+id/lbl_username" />
+
+    <TextView
+        android:text="Availability: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/lbl_availability"
+        android:layout_below="@+id/txt_email"
+        android:layout_toStartOf="@+id/txt_email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:ems="10"
+        android:background="@drawable/border"
+        android:id="@+id/txt_availability"
+        android:layout_alignBottom="@+id/lbl_availability"
+        android:layout_toEndOf="@+id/lbl_availability" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txt_age"
+        android:layout_toEndOf="@+id/lbl_location"
+        android:id="@+id/lbl_locationError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_age"
+        android:layout_toEndOf="@+id/lbl_preferences"
+        android:id="@+id/lbl_ageError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_preferences"
+        android:layout_toEndOf="@+id/lbl_carInfo"
+        android:id="@+id/lbl_preferencesError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/lbl_carInfo"
+        android:id="@+id/lbl_carInfoError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_email"
+        android:layout_toEndOf="@+id/lbl_carInfoError"
+        android:id="@+id/lbl_emailError" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_availability"
+        android:layout_toEndOf="@+id/lbl_emailError"
+        android:id="@+id/lbl_availabilityError" />
+
+</RelativeLayout>
